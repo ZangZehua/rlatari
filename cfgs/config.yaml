@@ -1,0 +1,35 @@
+defaults:
+  - _self_
+  - algo: dqn
+  - override hydra/hydra_logging: disabled
+  - override hydra/job_logging: disabled
+
+
+# task settings
+env: Alien-v5
+resize: ${algo.resize}
+num_envs: ${algo.num_envs}
+run: 3
+seed: ???
+
+base_path: ./results/${env}/${algo.algo_name}
+save_path: ???
+tb: True
+log: True
+
+model: True
+model_path: ???
+model_freq: 500000
+
+video: False
+video_path: ???
+
+cuda: True
+cuda_deterministic: True
+
+
+
+hydra:
+  output_subdir: null
+  run:
+    dir: .

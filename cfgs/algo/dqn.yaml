@@ -1,0 +1,22 @@
+defaults:
+  - _self_
+
+resize: 84
+num_envs: 1
+eval_times: 10
+
+max_steps: 5005000
+buffer_size: 100000
+learning_rate: 1e-4
+start_e: 1
+end_e: 0.01
+exploration_fraction: 0.05
+exploration_exp: 1e7
+learning_starts: 5000
+batch_size: 32
+gamma: 0.99
+tau: 1
+target_network_freq: 1000
+train_freq: 4
+
+algo_name: dqn
